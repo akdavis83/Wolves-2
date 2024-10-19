@@ -1,0 +1,37 @@
+body {
+  background: #0d0d0d;
+}
+
+.wolf-path {
+  
+  fill: transparent;
+  stroke: red;
+  stroke-width: 8;
+  stroke-dasharray: 25000px;
+  stroke-dashoffset: 25000px;
+  animation-name: draw, grow;
+  animation-duration: 3s, 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1, infinite;
+  animation-timing-function: ease-in;
+}
+
+@keyframes grow {
+  from {
+    stroke-width: 15;
+  }
+
+  50% {
+    stroke-width: 30;
+  }
+
+  to {
+    stroke-width: 15;
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
